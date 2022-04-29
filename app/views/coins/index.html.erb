@@ -3,16 +3,37 @@
 <h1>Moedas</h1>
 
 <div id="coins">
-  <thead>
-    <th>
-      <% @coins.each do |coin| %>
-        <%= render coin %>
-        <p>
-          <%= link_to "Show this coin", coin %>
-        </p>
-    </th>
-  </thead>
+  <table>
+    <%# Cabeçalho %>
+      <tr>
+        <td>
+          <strong>Description:</strong>
+        </td>
+
+        <td>
+          <strong>Acronym:</strong>
+        </td>
+
+        <td>
+          <strong>Url image:</strong>
+
+        </td>
+      </tr>
+      <%# Termina cabeçalho %>
+  <% @coins.each do |coin| %>
+  <%# Renderiza o que ta na outra pagina %>
+    <%= render coin %> 
+    <%# inclui mais uma td pro show this coin %>
+      <td>
+        <%= link_to "Show this coin", coin %>
+      </td>
+      <td>
+        <%= link_to "Deletar", @coin, method: :delete %>
+      </td>
+    </tr>
+    <%# Fecha a tr da outra pagina %>
   <% end %>
+  </table>
 </div>
 
 <%= link_to "New coin", new_coin_path %>

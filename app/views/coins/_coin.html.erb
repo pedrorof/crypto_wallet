@@ -1,20 +1,18 @@
-<tbody>
-  <div id="<%= dom_id coin %>">
-    <tr>
-      <td>
-      <strong>Description:</strong>
-      <%= coin.description %>
-    
 
-    
-      <strong>Acronym:</strong>
-      <%= coin.acronym %>
 
-    
-      <strong>Url image:</strong>
-      <img src = "<%= coin.url_image %>" width = "25px" height="25px" />
-      </td>
-    </tr>
 
-  </div>
-</tbody>
+      <%# Conteudo da tablela %>
+      <tr id="<%= dom_id coin %>">
+        <td>
+          <%= coin.description %>
+        </td>
+        
+        <td>
+          <%= coin.acronym %>
+        </td>
+        
+        <td>
+          <img src = "<%= coin.url_image %>" width = "25px" height="25px" />
+        </td>
+      
+    <%# acaba conteudo %>
