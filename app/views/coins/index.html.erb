@@ -21,14 +21,14 @@
       </tr>
       <%# Termina cabeçalho %>
   <% @coins.each do |coin| %>
-  <%# Renderiza o que ta na outra pagina %>
+  <%# Roda o que ta na outra pagina %>
     <%= render coin %> 
     <%# inclui mais uma td pro show this coin %>
       <td>
         <%= link_to "Show this coin", coin %>
       </td>
       <td>
-        <%= link_to "Deletar", @coin, method: :delete %>
+        <%= button_to "Destroy this coin", coin, method: :delete %>
       </td>
     </tr>
     <%# Fecha a tr da outra pagina %>
